@@ -35,16 +35,27 @@ Checklist — marcar cada item como OK / QUEBRADO / AUSENTE:
 - [ ] **UTM consistente** — os UTMs usados nos anúncios batem com o que o analytics espera capturar (ver item de analytics acima)?
 - [ ] **Risco de política** — algum criativo/copy com claim que pode gerar rejeição ou taxa de disputa alta (promessa de resultado financeiro específico, por exemplo)?
 
-## 3. Estrutura do relatório final
+## 3. Auditoria de landing page / CRO
+
+Fecha o funil que a auditoria de ads deixa em aberto — de nada adianta clique bem trackeado numa página que vaza. Referência: prática validada em escala pela V4 Company (maior rede de marketing digital do Brasil), adaptada ao escopo do Farol.
+
+- [ ] **Promessa do anúncio bate com a página** — o criativo/copy do anúncio promete a mesma coisa que a landing page entrega logo no topo? Divergência aqui é a causa nº1 de clique caro sem conversão.
+- [ ] **CTA único e claro** — a página tem um caminho de conversão óbvio, ou compete consigo mesma com múltiplos CTAs concorrentes?
+- [ ] **Fricção de formulário/checkout** — quantos campos até converter? Cada campo a mais é abandono a mais.
+- [ ] **Velocidade de carregamento** — mobile principalmente (testar via PageSpeed Insights); tráfego pago BR é majoritariamente mobile.
+- [ ] **Mystery shopper** — se fizer sentido pro caso, o próprio Caio se passa por lead (preenche o formulário, manda mensagem) e registra a experiência real de resposta: tempo até contato, qualidade do primeiro retorno. Módulo opcional, alto valor percebido, baixo esforço.
+
+## 4. Estrutura do relatório final
 
 Entregar como página/documento, seguindo esta ordem (achado mais crítico primeiro, sempre):
 
 1. **Resumo executivo** — 3-5 bullets, achados mais críticos, sem jargão. Cada bullet: o que está quebrado → o impacto real (não "isso é uma boa prática", e sim "por isso você não sabe se X está funcionando").
 2. **Analytics — o que está quebrado/faltando** — checklist da seção 1 preenchido, com nota de severidade (crítico/médio/nice-to-have).
 3. **Ads — o que está quebrado/ineficiente** — checklist da seção 2 preenchido, mesma lógica de severidade.
-4. **Quick wins (essa semana)** — 3-5 ações concretas, cada uma com o "porquê" e o esforço estimado (ex: "30 min, requer acesso admin ao PostHog").
-5. **Roadmap 30-60 dias** — o que resolver depois dos quick wins, geralmente mais estrutural (redesenhar funil, unificar identidade, etc.).
-6. **Fechamento natural pro Gerenciado** — só se fizer sentido genuíno pro caso (não forçar): "esses itens do roadmap são exatamente o que o Gerenciado cobre continuamente."
+4. **Landing page/CRO — onde o funil vaza depois do clique** — checklist da seção 3 preenchido; incluir achado do mystery shopper se aplicado.
+5. **Quick wins (essa semana)** — 3-5 ações concretas, cada uma com o "porquê" e o esforço estimado (ex: "30 min, requer acesso admin ao PostHog").
+6. **Roadmap 30-60 dias** — o que resolver depois dos quick wins, geralmente mais estrutural (redesenhar funil, unificar identidade, etc.).
+7. **Fechamento natural pro Gerenciado** — só se fizer sentido genuíno pro caso (não forçar): "esses itens do roadmap são exatamente o que o Gerenciado cobre continuamente."
 
 ## Template — e-mail de coleta de acesso
 

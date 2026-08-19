@@ -44,3 +44,9 @@ Founder sabe exatamente onde o funil vaza e onde o dinheiro de ads vai bem ou ma
 1. **Diagnóstico Farol** — R$297, pagamento único. Auditoria real do PostHog/GA + conta de ads, relatório do que está quebrado e o que fazer. Entrega manual, 100% viável hoje.
 2. **Farol Gerenciado** — R$697/mês (sobe pra R$997 depois), venda assistida (call de onboarding). Setup completo + monitoramento semanal com insight acionável. Entrega manual.
 3. **Farol Starter** — self-serve, dashboard automatizado com alerta. **Não existe ainda** — mesma classe de trabalho de engenharia que o motor de ranking do Winlist exigia. Fica em lista de espera, não é vendido até estar construído (mesmo motivo do Tracker/Pro no Winlist: não vender o que não existe).
+
+## Decisão registrada: o que não incorporar (benchmark V4 Company)
+
+Analisamos o catálogo da V4 Company (maior rede de marketing digital do Brasil — 7 soluções × 4 modelos = 35 combinações) como benchmark de mercado. Incorporado: auditoria de landing page/CRO + mystery shopper opcional no Diagnóstico (ver `docs/diagnostico-playbook.md`), porque fecha o funil que a auditoria de ads/analytics já cobre.
+
+**Descartado de propósito:** diagnóstico de Google Meu Negócio, sequência de WhatsApp pra loja física, scripts de SDR AI-first, e o modelo de catálogo amplo em si. Motivo: o público validado da V4 é comércio local/tradicional — diferente do segmento único do Farol (founder early-stage de produto digital, framework JTBD acima). Ampliar catálogo pra parecer com a V4 dilui exatamente o posicionamento que o framework de 6 partes existe pra proteger. Não reabrir essa decisão sem uma razão nova e específica.
