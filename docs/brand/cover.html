@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=IBM+Plex+Mono:wght@500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1128px; height: 191px;
+    background: #0A0D12;
+    overflow: hidden;
+  }
+  .canvas {
+    position: relative;
+    width: 1128px; height: 191px;
+    display: flex; align-items: center;
+    padding-left: 90px;
+  }
+  .ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #1A1F28;
+  }
+  .ring.r1 { width: 520px; height: 520px; right: -160px; top: -165px; }
+  .ring.r2 { width: 380px; height: 380px; right: -90px; top: -95px; border-color: #232A35; }
+  .ring.r3 { width: 250px; height: 250px; right: -25px; top: -30px; border-color: #2E3644; }
+  .sweep {
+    position: absolute;
+    width: 520px; height: 520px;
+    right: -160px; top: -165px;
+    border-radius: 50%;
+    background: conic-gradient(from 160deg, transparent 0deg, transparent 260deg, rgba(62,214,196,0.20) 300deg, rgba(62,214,196,0.5) 322deg, transparent 328deg);
+  }
+  .content { position: relative; z-index: 1; }
+  .wordmark { display: flex; align-items: center; gap: 16px; margin-bottom: 10px; }
+  .mark {
+    width: 44px; height: 44px;
+    background: #3ED6C4;
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .mark span {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: #06201C;
+  }
+  .name {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 34px;
+    color: #E4E8ED;
+    letter-spacing: -0.01em;
+  }
+  .tagline {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 15px;
+    color: #8791A0;
+    letter-spacing: 0.01em;
+    max-width: 520px;
+  }
+  .tagline strong { color: #3ED6C4; font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="ring r1"></div>
+    <div class="ring r2"></div>
+    <div class="ring r3"></div>
+    <div class="sweep"></div>
+    <div class="content">
+      <div class="wordmark">
+        <div class="mark"><span>F</span></div>
+        <div class="name">Farol</div>
+      </div>
+      <div class="tagline">Analytics e monitoramento de ads pra founder early-stage — <strong>sem voar às cegas.</strong></div>
+    </div>
+  </div>
+</body>
+</html>
