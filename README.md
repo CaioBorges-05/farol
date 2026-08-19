@@ -8,7 +8,7 @@ Ver `docs/positioning.md` (framework JTBD completo, com changelog v1→v2) e `do
 
 ## Oferta
 
-1. **Diagnóstico — R$297, pagamento único.** Checkout ligado: https://buy.stripe.com/00wfZi0p6fVI3sCeqq6Ri01. Auditoria de PostHog/GA4 + conta de ads + landing page/CRO, mais leitura de posicionamento/canal. Entrega manual em dias.
+1. **Diagnóstico — R$497 (âncora R$897), pagamento único.** Checkout ligado: https://buy.stripe.com/9B628s2xe9xk4wG2HI6Ri02. Auditoria de PostHog/GA4 + conta de ads + landing page/CRO, mais leitura de posicionamento/canal. Entrega manual em dias. Garantia: 3 problemas reais ou dinheiro de volta.
 2. **Gerenciado — R$1.497/mês (preço de lançamento, sobe pra R$1.997), venda assistida.** Função de growth completa (analytics + ads + posicionamento + estratégia de canal + roadmap de experimentos). CTA abre e-mail pra agendar conversa — sem checkout automatizado de propósito (retainer não deve ser self-serve).
 3. **Starter — self-serve, dashboard automatizado.** Não existe ainda. Lista de espera por e-mail — não vendido até estar construído de verdade (mesmo princípio aplicado ao Tracker/Pro do Winlist).
 

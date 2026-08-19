@@ -118,6 +118,28 @@
   .readout-item p { font-size: 14px; color: var(--text-sec); line-height: 1.65; }
   .readout-item strong { color: var(--text); }
 
+  /* ===== CREDENTIALS (prova social) ===== */
+  .credentials { padding: 56px 0; border-bottom: 1px solid var(--border-subtle); }
+  .cred-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: center; }
+  .cred-bio-tag { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-muted); margin-bottom: 12px; }
+  .cred-bio h3 { font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: -0.01em; margin-bottom: 10px; }
+  .cred-bio p { font-size: 14px; color: var(--text-sec); line-height: 1.7; }
+  .cred-bio a { color: var(--accent); text-decoration: none; font-family: var(--font-mono); font-size: 12px; }
+  .cred-bio a:hover { text-decoration: underline; }
+  .cred-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; border-radius: 10px; overflow: hidden; }
+  .cred-stat { background: var(--surface); padding: 20px 16px; text-align: center; }
+  .cred-stat .n { font-family: var(--font-display); font-weight: 800; font-size: 28px; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .cred-stat .d { font-family: var(--font-mono); font-size: 10px; color: var(--text-sec); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; line-height: 1.5; }
+
+  /* ===== TIER ICONS ===== */
+  .tier-icon { width: 36px; height: 36px; margin-bottom: 14px; color: var(--text-muted); }
+  .tier.primary .tier-icon { color: var(--accent); }
+  .tier-icon svg { width: 100%; height: 100%; }
+
+  @media (max-width: 760px) {
+    .cred-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+
   /* ===== SECTION SHARED ===== */
   .section { padding: 80px 0 8px; }
   .section-head { text-align: center; margin-bottom: 44px; }
@@ -259,6 +281,26 @@
     </div>
   </section>
 
+  <section class="credentials">
+    <div class="wrap cred-grid">
+      <div class="cred-bio">
+        <div class="cred-bio-tag">Quem tá por trás disso</div>
+        <h3>Não é uma agência. É quem já fez isso de verdade.</h3>
+        <p>
+          Caio Borges — hoje à frente de analytics e mídia paga na Doris.
+          Antes disso, quase duas décadas testando o que funciona (e o que não
+          funciona) em growth de verdade, não em teoria de curso.
+          <a href="https://www.linkedin.com/in/caiomarketing360/" target="_blank" rel="noopener">Ver perfil no LinkedIn →</a>
+        </p>
+      </div>
+      <div class="cred-stats">
+        <div class="cred-stat"><div class="n">20+</div><div class="d">anos em marketing, growth e dado</div></div>
+        <div class="cred-stat"><div class="n">30k+</div><div class="d">pessoas acompanhando no LinkedIn</div></div>
+        <div class="cred-stat"><div class="n">MBA</div><div class="d">Data Science, ML e IA — TripleTen</div></div>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
       <div class="section-head">
@@ -331,16 +373,18 @@
 
         <div class="tier primary">
           <span class="tier-badge now">Comece aqui</span>
+          <div class="tier-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M12 12l4.5-4.5"></path><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"></circle><path d="M12 5v1.4M19 12h-1.4M12 19v-1.4M5 12h1.4" stroke-width="1.2"></path></svg></div>
           <div class="tier-label">Diagnóstico</div>
           <div class="tier-name">Farol Diagnóstico</div>
           <div class="tier-desc">Auditoria real do seu PostHog/GA4, conta de ads e landing page — mais uma leitura de posicionamento e fit de canal. O que está quebrado, onde o funil vaza, o que fazer primeiro.</div>
-          <div class="tier-price"><span class="now">R$297</span></div>
+          <div class="tier-price"><span class="old">R$897</span><span class="now">R$497</span></div>
           <div class="tier-fine">pagamento único · entrega em dias</div>
-          <a class="tier-cta" href="https://buy.stripe.com/00wfZi0p6fVI3sCeqq6Ri01">Pedir meu diagnóstico</a>
+          <a class="tier-cta" href="https://buy.stripe.com/9B628s2xe9xk4wG2HI6Ri02">Pedir meu diagnóstico</a>
         </div>
 
         <div class="tier">
           <span class="tier-badge wait">Venda assistida</span>
+          <div class="tier-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5.4"></circle><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"></circle></svg></div>
           <div class="tier-label">Gerenciado</div>
           <div class="tier-name">Farol Gerenciado</div>
           <div class="tier-desc">Sua função de growth rodando: analytics + ads + posicionamento + estratégia de canal + roadmap de experimentos. Acompanhamento contínuo, não um raio-x único.</div>
@@ -352,6 +396,7 @@
 
         <div class="tier disabled">
           <span class="tier-badge wait">Em breve</span>
+          <div class="tier-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.2 2"></path></svg></div>
           <div class="tier-label">Starter</div>
           <div class="tier-name">Farol Starter</div>
           <div class="tier-desc">Dashboard automatizado com alerta em tempo real, self-serve. Ainda não existe — entra na lista de espera.</div>
@@ -363,7 +408,7 @@
       </div>
 
       <div class="guarantee">
-        <p><strong>Garantia do Diagnóstico:</strong> se eu não encontrar pelo menos 3 problemas reais e acionáveis na sua auditoria, devolvo os R$297 — sem perguntas.</p>
+        <p><strong>Garantia do Diagnóstico:</strong> se eu não encontrar pelo menos 3 problemas reais e acionáveis na sua auditoria, devolvo os R$497 — sem perguntas.</p>
       </div>
     </div>
   </section>
@@ -371,8 +416,8 @@
   <section class="final">
     <div class="wrap">
       <h2>Cada mês sem isso já tem um custo — você só não viu o número ainda.</h2>
-      <p class="final-sub">R$297 e alguns dias é o menor risco possível pra descobrir onde está vazando. Garantido, ou seu dinheiro de volta.</p>
-      <a class="btn-primary" href="https://buy.stripe.com/00wfZi0p6fVI3sCeqq6Ri01">Pedir meu diagnóstico — R$297</a>
+      <p class="final-sub">R$497 e alguns dias é o menor risco possível pra descobrir onde está vazando. Garantido, ou seu dinheiro de volta.</p>
+      <a class="btn-primary" href="https://buy.stripe.com/9B628s2xe9xk4wG2HI6Ri02">Pedir meu diagnóstico — R$497</a>
     </div>
   </section>
 

@@ -44,7 +44,7 @@ Founder tem uma função de growth de verdade rodando — estratégia, execuçã
 
 ## Como isso vira produto (fases)
 
-1. **Diagnóstico Farol** — R$297, pagamento único. Auditoria técnica (PostHog/GA + ads + landing page/CRO) **e** leitura de posicionamento/fit de canal — relatório do que está quebrado e o que fazer. Entrega manual, 100% viável hoje.
+1. **Diagnóstico Farol** — R$497 (âncora R$897), pagamento único. Auditoria técnica (PostHog/GA + ads + landing page/CRO) **e** leitura de posicionamento/fit de canal — relatório do que está quebrado e o que fazer. Entrega manual, 100% viável hoje. Garantia de 3 problemas reais ou reembolso.
 2. **Farol Gerenciado** — **R$1.497/mês** (preço de lançamento, sobe pra R$1.997 depois), venda assistida (call de onboarding). Função de growth completa: analytics + ads + estratégia de canal/conteúdo + posicionamento + roadmap de experimentos. Entrega manual.
 3. **Farol Starter** — self-serve, dashboard automatizado com alerta. **Não existe ainda** — mesma classe de trabalho de engenharia que o motor de ranking do Winlist exigia. Fica em lista de espera, não é vendido até estar construído (mesmo motivo do Tracker/Pro no Winlist: não vender o que não existe).
 
@@ -58,3 +58,4 @@ Analisamos o catálogo da V4 Company (maior rede de marketing digital do Brasil 
 
 - **v1 (2026-08-19, manhã):** escopo = analytics + monitoramento de ads. Gerenciado R$697/mês.
 - **v2 (2026-08-19, tarde):** escopo ampliado por decisão explícita do fundador — de "audita ads/analytics" pra "assume a função de marketing/growth" — mesmo segmento (founder early-stage sem time de marketing). Gerenciado reprecificado pra R$1.497/mês, refletindo o escopo maior (cobrar o mesmo preço por 3x mais trabalho desvaloriza o serviço).
+- **v3 (2026-08-19, tarde):** Diagnóstico reprecificado de R$297 pra R$497 (âncora R$897) — mesmo motivo do Gerenciado, mais o fato de agora ancorar prova social real (LinkedIn: 20+ anos, 30k+ seguidores, MBA Data Science/ML/IA). Site ganhou seção de credenciais, ícones de instrumento por plano, caixa de custo de inação quantificado, comparação vs. CMO fracionado, garantia e nota de vagas limitadas.
