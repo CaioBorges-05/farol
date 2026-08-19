@@ -1,15 +1,15 @@
 # Farol
 
-Analytics + monitoramento de ads pra founder early-stage BR que já roda tráfego pago mas não tem analista nem gestor de tráfego dedicado.
+Função de marketing e growth pra founder early-stage BR que ainda não tem time de marketing dedicado — analytics, ads, posicionamento e estratégia de canal.
 
-**PUV:** Farol monta o analytics e monitora seus ads de verdade — pra você saber onde o dinheiro e o usuário estão vazando, sem precisar contratar um analista e um gestor de tráfego que ainda não cabem no seu estágio.
+**PUV (v2):** Farol assume sua função de marketing e growth — analytics, ads, posicionamento e estratégia de canal — pra você não precisar contratar um CMO ou um time inteiro que ainda não cabe no seu estágio.
 
-Ver `docs/positioning.md` (framework JTBD completo) e `docs/brand-tokens.md` (identidade visual, direção de aviação/cockpit).
+Ver `docs/positioning.md` (framework JTBD completo, com changelog v1→v2) e `docs/brand-tokens.md` (identidade visual, direção de aviação/cockpit).
 
 ## Oferta
 
-1. **Diagnóstico — R$297, pagamento único.** Checkout ligado: https://buy.stripe.com/00wfZi0p6fVI3sCeqq6Ri01. Auditoria de PostHog/GA4 + conta de ads, entrega manual em dias.
-2. **Gerenciado — R$697/mês (preço de lançamento, sobe pra R$997), venda assistida.** CTA abre e-mail pra agendar conversa — sem checkout automatizado de propósito (retainer não deve ser self-serve).
+1. **Diagnóstico — R$297, pagamento único.** Checkout ligado: https://buy.stripe.com/00wfZi0p6fVI3sCeqq6Ri01. Auditoria de PostHog/GA4 + conta de ads + landing page/CRO, mais leitura de posicionamento/canal. Entrega manual em dias.
+2. **Gerenciado — R$1.497/mês (preço de lançamento, sobe pra R$1.997), venda assistida.** Função de growth completa (analytics + ads + posicionamento + estratégia de canal + roadmap de experimentos). CTA abre e-mail pra agendar conversa — sem checkout automatizado de propósito (retainer não deve ser self-serve).
 3. **Starter — self-serve, dashboard automatizado.** Não existe ainda. Lista de espera por e-mail — não vendido até estar construído de verdade (mesmo princípio aplicado ao Tracker/Pro do Winlist).
 
 ## Status

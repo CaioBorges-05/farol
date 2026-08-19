@@ -2,6 +2,8 @@
 
 Derivado de `docs/positioning.md` e `docs/brand-tokens.md`. Objetivo: toda postagem devia poder ser lida em voz alta como se fosse um founder falando pra outro founder, não uma agência falando pra um lead.
 
+**Atualização v2:** o escopo do Farol ampliou de "analytics + ads" pra "função de marketing/growth completa" (ver changelog em `docs/positioning.md`). Os 5 posts já escritos continuam válidos (são subtemas reais dentro do escopo novo), mas a partir daqui a pauta deve variar entre os 4 pilares: analytics, ads, posicionamento/mensagem, e estratégia de canal — não travar só em analytics/ads como nos primeiros 5.
+
 ## Voz
 
 - **1ª pessoa, direto.** "Eu vejo", "eu fiz", nunca "a Farol acredita que..." — o formato é Thought Leader Ads, a credibilidade é da pessoa, não da marca.

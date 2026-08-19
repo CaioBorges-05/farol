@@ -2,51 +2,59 @@
 
 Gerado com o framework JTBD de 6 partes (skill `value-proposition`). Um segmento só, de propósito — diluir entre "pequeno negócio" e "startup" enfraquece a mensagem.
 
+**v2 (2026-08-19):** o job to be done foi ampliado de propósito — de "audita analytics e ads" pra "assume a função de marketing/growth" — mantendo o mesmo segmento único. Isso é diferente da decisão de descartar o benchmark V4 (que era sobre puxar serviços de um público diferente): aqui o público continua o mesmo, o que muda é o tamanho do job que o Farol resolve pra ele. Ver changelog no fim do documento.
+
 ## 1. Quem
 
-Founders de startups/negócios digitais early-stage no Brasil (bootstrapped a Series A) que **já rodam tráfego pago** (Meta/Google/TikTok) mas não têm ninguém dedicado a analytics nem a gestão de ads — o founder ou um generalista único tenta cobrir os dois ao mesmo tempo, sem tempo nem profundidade pra fazer direito.
+Founders de startups/negócios digitais early-stage no Brasil (bootstrapped a Series A) que **ainda não têm time de marketing/growth** — fazem tráfego pago, conteúdo e posicionamento nas horas vagas, sem estratégia nem processo, ou terceirizam pedaços soltos sem coerência entre eles.
 
 ## 2. Por quê (problema / JTBD)
 
-"Preciso saber, com confiança, onde meu funil está vazando e se meu dinheiro de ads está sendo bem gasto — sem contratar um analista E um gestor de tráfego separados, que ainda não cabem no meu estágio." Dor: decisão de produto no achismo, CAC subindo sem ninguém perceber a tempo, verba de ads queimada sem saber por quê.
+"Preciso que alguém assuma minha função de marketing/growth — decidir o que comunicar, onde buscar cliente, testar e medir se está funcionando — sem contratar um time inteiro (ou um CMO) que ainda não cabe no meu estágio." Dor: decisão de produto e de canal no achismo, mensagem/posicionamento confuso, marketing feito em rajadas sem processo, dinheiro (de ads ou de tempo) queimado sem saber onde.
 
 ## 3. Antes (situação atual)
 
-PostHog/GA4 mal configurado ou inexistente, dashboard que ninguém olha, planilha de ads atualizada de vez em quando, decisão de roadmap no feeling. Alternativa cara: contratar CLT (analista + gestor de tráfego, R$8-15k/mês cada) — inviável nesse estágio.
+PostHog/GA4 mal configurado ou inexistente, dashboard que ninguém olha, planilha de ads atualizada de vez em quando, posicionamento que muda a cada post, nenhum roadmap de experimento de growth — só reação. Alternativa cara: contratar CMO fracionado ou agência full-service (R$8-15k+/mês), ou tentar contratar um time interno cedo demais.
 
 ## 4. Como (solução)
 
-Farol monta o instrumento de analytics certo (funil real no PostHog) **e** monitora os ads de verdade (Meta/Google/TikTok), entregando insight acionável — não dashboard bruto pra interpretar sozinho, mas "aqui está o que aconteceu e o que fazer". Começa com um diagnóstico pago de baixo compromisso, evolui pro acompanhamento gerenciado.
+Farol vira a função de growth do founder: analytics instrumentado direito + ads monitorados de verdade + clareza de posicionamento/mensagem + estratégia de canal + roadmap de experimentos + CRO — entregue por uma pessoa real interpretando o negócio, não um dashboard genérico nem um time de agência trabalhando em escala. Começa pelo Diagnóstico (baixo compromisso, auditoria técnica + leitura de posicionamento/canal), evolui pro Gerenciado (a função de growth rodando todo mês).
 
 ## 5. Depois (resultado)
 
-Founder sabe exatamente onde o funil vaza e onde o dinheiro de ads vai bem ou mal, decide roadmap e budget com dado real — sem contratar 2 pessoas em tempo integral. Detecta problema em dias, não meses.
+Founder tem uma função de growth de verdade rodando — estratégia, execução e medição — sem contratar CMO ou montar um time cedo demais. Decide canal, mensagem e budget com direção clara, não reagindo semana a semana.
 
 ## 6. Alternativas (e por que Farol vence)
 
 | Alternativa | Por que perde |
 |---|---|
-| Contratar CLT (analista + gestor de tráfego) | Caro e lento de contratar pro estágio da empresa |
-| Fazer sozinho (o que já acontece hoje) | É literalmente o problema |
-| Ferramenta self-serve internacional (Mixpanel, Madgicx) | Cobra em dólar, sem ninguém interpretando o dado por você |
-| Agência de mídia tradicional | Só cobre ads, ignora instrumentação de produto |
+| Contratar CMO fracionado / head of growth | Caro (R$8-15k+/mês) e mais lento de contratar bem do que testar com o Farol primeiro |
+| Agência full-service tradicional | Processo padronizado pra escala, pouca profundidade por cliente, pouca flexibilidade pro estágio inicial |
+| Fazer sozinho (o que já acontece hoje) | É literalmente o problema — marketing em rajada, sem processo |
+| Ferramenta self-serve internacional (Mixpanel, Madgicx) | Cobra em dólar, resolve só um pedaço (medição), sem estratégia nem interpretação |
+| Freelancers soltos por especialidade (um de ads, um de conteúdo) | Ninguém dono da estratégia como um todo — pedaços que não conversam entre si |
 
 ## Declaração de valor (1-2 frases)
 
-"Farol monta o analytics e monitora seus ads de verdade — pra você saber onde o dinheiro e o usuário estão vazando, sem precisar contratar um analista e um gestor de tráfego que ainda não cabem no seu estágio."
+"Farol assume sua função de marketing e growth — analytics, ads, posicionamento e estratégia de canal — pra você não precisar contratar um CMO ou um time inteiro que ainda não cabe no seu estágio."
 
 ## Frase de posicionamento (marketing)
 
-"Pra founders early-stage que já rodam ads mas voam às cegas no resto: Farol é o instrumento que tira você do achismo — funil instrumentado direito + ads monitorados de verdade, com insight que diz o que fazer, não só o que aconteceu."
+"Pra founders early-stage sem time de marketing: Farol é a função de growth que você ainda não pode contratar — estratégia, execução e medição, com uma pessoa real por trás, não um dashboard genérico nem uma agência trabalhando em escala."
 
 ## Como isso vira produto (fases)
 
-1. **Diagnóstico Farol** — R$297, pagamento único. Auditoria real do PostHog/GA + conta de ads, relatório do que está quebrado e o que fazer. Entrega manual, 100% viável hoje.
-2. **Farol Gerenciado** — R$697/mês (sobe pra R$997 depois), venda assistida (call de onboarding). Setup completo + monitoramento semanal com insight acionável. Entrega manual.
+1. **Diagnóstico Farol** — R$297, pagamento único. Auditoria técnica (PostHog/GA + ads + landing page/CRO) **e** leitura de posicionamento/fit de canal — relatório do que está quebrado e o que fazer. Entrega manual, 100% viável hoje.
+2. **Farol Gerenciado** — **R$1.497/mês** (preço de lançamento, sobe pra R$1.997 depois), venda assistida (call de onboarding). Função de growth completa: analytics + ads + estratégia de canal/conteúdo + posicionamento + roadmap de experimentos. Entrega manual.
 3. **Farol Starter** — self-serve, dashboard automatizado com alerta. **Não existe ainda** — mesma classe de trabalho de engenharia que o motor de ranking do Winlist exigia. Fica em lista de espera, não é vendido até estar construído (mesmo motivo do Tracker/Pro no Winlist: não vender o que não existe).
 
 ## Decisão registrada: o que não incorporar (benchmark V4 Company)
 
 Analisamos o catálogo da V4 Company (maior rede de marketing digital do Brasil — 7 soluções × 4 modelos = 35 combinações) como benchmark de mercado. Incorporado: auditoria de landing page/CRO + mystery shopper opcional no Diagnóstico (ver `docs/diagnostico-playbook.md`), porque fecha o funil que a auditoria de ads/analytics já cobre.
 
-**Descartado de propósito:** diagnóstico de Google Meu Negócio, sequência de WhatsApp pra loja física, scripts de SDR AI-first, e o modelo de catálogo amplo em si. Motivo: o público validado da V4 é comércio local/tradicional — diferente do segmento único do Farol (founder early-stage de produto digital, framework JTBD acima). Ampliar catálogo pra parecer com a V4 dilui exatamente o posicionamento que o framework de 6 partes existe pra proteger. Não reabrir essa decisão sem uma razão nova e específica.
+**Descartado de propósito:** diagnóstico de Google Meu Negócio, sequência de WhatsApp pra loja física, scripts de SDR AI-first, e o modelo de catálogo amplo em si. Motivo: o público validado da V4 é comércio local/tradicional — diferente do segmento único do Farol (founder early-stage de produto digital). Ampliar catálogo pra parecer com a V4 dilui exatamente o posicionamento que o framework de 6 partes existe pra proteger. Não reabrir essa decisão sem uma razão nova e específica.
+
+## Changelog
+
+- **v1 (2026-08-19, manhã):** escopo = analytics + monitoramento de ads. Gerenciado R$697/mês.
+- **v2 (2026-08-19, tarde):** escopo ampliado por decisão explícita do fundador — de "audita ads/analytics" pra "assume a função de marketing/growth" — mesmo segmento (founder early-stage sem time de marketing). Gerenciado reprecificado pra R$1.497/mês, refletindo o escopo maior (cobrar o mesmo preço por 3x mais trabalho desvaloriza o serviço).
