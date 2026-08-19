@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Farol</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #0a0d12;
+    --surface: #12161d;
+    --surface-2: #171c25;
+    --border: #232a35;
+    --border-subtle: #1a1f28;
+    --text: #e4e8ed;
+    --text-sec: #8791a0;
+    --text-muted: #525b69;
+    --accent: #3ed6c4;
+    --accent-ink: #06201c;
+    --accent-dim: rgba(62, 214, 196, 0.10);
+    --accent-mid: rgba(62, 214, 196, 0.24);
+    --warn: #ffb020;
+    --warn-dim: rgba(255, 176, 32, 0.12);
+    --critical: #ff4d4d;
+    --good: #34d399;
+
+    --font-display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  a { color: inherit; }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== RIBBON ===== */
+  .ribbon { position: sticky; top: 0; z-index: 50; background: var(--accent); color: var(--accent-ink); }
+  .ribbon-inner { max-width: 1040px; margin: 0 auto; padding: 9px 24px; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; text-align: center; }
+  .ribbon-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-ink); flex-shrink: 0; animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+  .ribbon-text { font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: 0.03em; }
+  .ribbon-text strong { text-decoration: underline; text-underline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { .ribbon-dot { animation: none; } }
+
+  /* ===== NAV ===== */
+  nav { padding: 20px 0; border-bottom: 1px solid var(--border-subtle); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-mark { width: 28px; height: 28px; background: var(--accent); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; font-size: 13px; color: var(--accent-ink); }
+  .logo-text { font-family: var(--font-display); font-weight: 800; font-size: 16px; letter-spacing: -0.01em; }
+  .nav-cta { font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-decoration: none; color: var(--text-sec); padding: 8px 14px; border: 1px solid var(--border); border-radius: 6px; transition: border-color 0.15s, color 0.15s; }
+  .nav-cta:hover { border-color: var(--accent-mid); color: var(--accent); }
+
+  /* ===== HERO / RADAR ===== */
+  .hero { padding: 88px 0 60px; text-align: center; position: relative; overflow: hidden; }
+
+  .radar { position: absolute; top: 50%; left: 50%; width: 900px; height: 900px; margin: -450px 0 0 -450px; border-radius: 50%; pointer-events: none; opacity: 0.5; }
+  .radar-ring { position: absolute; inset: 0; border: 1px solid var(--border-subtle); border-radius: 50%; }
+  .radar-ring.r2 { inset: 90px; }
+  .radar-ring.r3 { inset: 180px; }
+  .radar-ring.r4 { inset: 270px; }
+  .radar-sweep {
+    position: absolute; inset: 0; border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent 0deg, transparent 300deg, var(--accent-dim) 340deg, var(--accent-mid) 358deg, transparent 360deg);
+    animation: sweep 6s linear infinite;
+  }
+  @keyframes sweep { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .radar-sweep { animation: none; background: conic-gradient(from 0deg, transparent 0deg, var(--accent-dim) 340deg, transparent 360deg); } }
+
+  .hero-inner { position: relative; z-index: 1; }
+
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warn); background: var(--warn-dim); border: 1px solid rgba(255, 176, 32, 0.28); padding: 6px 14px; border-radius: 3px; margin-bottom: 28px; }
+
+  h1 { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.03em; text-wrap: balance; font-size: clamp(34px, 5.4vw, 56px); line-height: 1.08; max-width: 780px; margin: 0 auto 24px; }
+  h1 .fade { color: var(--text-sec); }
+  h1 .pop { color: var(--accent); }
+
+  .hero-sub { font-size: 17px; color: var(--text-sec); max-width: 580px; margin: 0 auto 36px; line-height: 1.7; }
+  .hero-sub strong { color: var(--text); font-weight: 600; }
+
+  .btn-primary { display: inline-block; font-family: var(--font-body); font-weight: 700; font-size: 15px; color: var(--accent-ink); background: var(--accent); padding: 16px 32px; border-radius: 8px; text-decoration: none; letter-spacing: -0.01em; box-shadow: 0 0 0 1px var(--accent-mid), 0 18px 40px -14px rgba(62, 214, 196, 0.4); transition: transform 0.15s ease; }
+  .btn-primary:hover { transform: translateY(-1px); }
+
+  .btn-secondary { display: inline-block; font-family: var(--font-body); font-weight: 600; font-size: 14px; color: var(--text); background: transparent; padding: 15px 28px; border-radius: 8px; text-decoration: none; border: 1px solid var(--border); transition: border-color 0.15s; }
+  .btn-secondary:hover { border-color: var(--accent-mid); }
+
+  .hero-note { margin-top: 18px; font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
+  .hero-note strong { color: var(--text-sec); }
+
+  /* ===== READOUT STRIP (o antes) ===== */
+  .readout { border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 36px 0; }
+  .readout-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .readout-item .label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .readout-item p { font-size: 14px; color: var(--text-sec); line-height: 1.65; }
+  .readout-item strong { color: var(--text); }
+
+  /* ===== SECTION SHARED ===== */
+  .section { padding: 80px 0 8px; }
+  .section-head { text-align: center; margin-bottom: 44px; }
+  .section-tag { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--text-muted); margin-bottom: 14px; }
+  h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(24px, 3.4vw, 34px); letter-spacing: -0.02em; text-wrap: balance; margin-bottom: 12px; }
+  .section-sub { color: var(--text-sec); font-size: 15px; max-width: 500px; margin: 0 auto; }
+
+  /* ===== DIFFERENTIATOR TABLE ===== */
+  .diff-table { max-width: 780px; margin: 0 auto 80px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .diff-row { display: grid; grid-template-columns: 1.3fr 1.6fr; }
+  .diff-row + .diff-row { border-top: 1px solid var(--border-subtle); }
+  .diff-row.head { background: var(--surface-2); }
+  .diff-row.you { background: var(--accent-dim); }
+  .diff-cell { padding: 16px 20px; font-size: 13px; }
+  .diff-row.head .diff-cell { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+  .diff-cell.alt { color: var(--text-sec); border-right: 1px solid var(--border-subtle); }
+  .diff-row.you .diff-cell.alt { color: var(--text); font-weight: 600; border-right-color: var(--accent-mid); }
+  .diff-cell.why { color: var(--text-sec); line-height: 1.55; }
+  .diff-row.you .diff-cell.why { color: var(--text); }
+
+  /* ===== TIERS ===== */
+  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start; margin-top: 8px; }
+  .tier { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px; position: relative; }
+  .tier.primary { border-color: var(--accent-mid); background: linear-gradient(180deg, var(--accent-dim), var(--surface) 45%); }
+
+  .tier-badge { position: absolute; top: -12px; left: 28px; font-family: var(--font-mono); font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; }
+  .tier-badge.now { background: var(--accent); color: var(--accent-ink); }
+  .tier-badge.wait { background: var(--surface-2); color: var(--text-sec); border: 1px solid var(--border); }
+
+  .tier-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .tier.primary .tier-label { color: var(--accent); }
+  .tier-name { font-family: var(--font-display); font-weight: 700; font-size: 17px; margin-bottom: 8px; }
+  .tier-desc { font-size: 13px; color: var(--text-sec); line-height: 1.6; margin-bottom: 20px; min-height: 60px; }
+
+  .tier-price { font-family: var(--font-mono); margin-bottom: 4px; }
+  .tier-price .now { font-family: var(--font-display); font-weight: 800; font-size: 28px; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; color: var(--text); }
+  .tier-price .old { font-size: 13px; color: var(--text-muted); text-decoration: line-through; margin-right: 6px; }
+  .tier-price .period { font-size: 13px; color: var(--text-sec); }
+  .tier-fine { font-family: var(--font-mono); font-size: 10px; color: var(--warn); margin-bottom: 20px; }
+
+  .tier-cta { display: block; text-align: center; width: 100%; padding: 13px; border-radius: 8px; font-family: var(--font-body); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .tier:not(.primary) .tier-cta { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .tier.primary .tier-cta { background: var(--accent); color: var(--accent-ink); border: 1px solid transparent; }
+  .tier.disabled .tier-cta { background: transparent; color: var(--text-muted); border: 1px dashed var(--border); cursor: default; }
+
+  /* ===== FINAL ===== */
+  .final { padding: 88px 0 100px; text-align: center; }
+  .final h2 { max-width: 600px; margin: 0 auto 12px; }
+  .final-sub { color: var(--text-sec); font-size: 15px; max-width: 460px; margin: 0 auto 32px; }
+
+  footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; text-align: center; }
+  footer p { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
+
+  @media (max-width: 760px) {
+    .readout-inner { grid-template-columns: 1fr; gap: 22px; }
+    .tiers { grid-template-columns: 1fr; }
+    .diff-row { grid-template-columns: 1fr 1.3fr; }
+    .hero { padding: 64px 0 44px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="ribbon">
+    <div class="ribbon-inner">
+      <span class="ribbon-dot"></span>
+      <span class="ribbon-text">PREÇO DE LANÇAMENTO — Gerenciado sobe de <strong>R$697</strong> pra R$997/mês em breve</span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark">F</span>
+        <span class="logo-text">Farol</span>
+      </a>
+      <a class="nav-cta" href="#planos">Ver planos</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="radar">
+      <div class="radar-ring"></div>
+      <div class="radar-ring r2"></div>
+      <div class="radar-ring r3"></div>
+      <div class="radar-ring r4"></div>
+      <div class="radar-sweep"></div>
+    </div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow">Painel de voo do seu crescimento</span>
+      <h1>
+        <span class="fade">Você roda ads e decide roadmap</span><br>
+        <span class="pop">voando às cegas.</span> Sai desse voo.
+      </h1>
+      <p class="hero-sub">
+        Farol monta o instrumento de analytics certo <strong>e</strong> monitora
+        seus ads de verdade — pra você saber onde o dinheiro e o usuário estão
+        vazando, sem contratar um analista e um gestor de tráfego que ainda
+        não cabem no seu estágio.
+      </p>
+      <a class="btn-primary" href="#planos">Ver planos</a>
+      <p class="hero-note">Pra founder early-stage que <strong>já roda tráfego pago</strong> mas não tem ninguém cuidando de analytics nem de ads de verdade.</p>
+    </div>
+  </section>
+
+  <section class="readout">
+    <div class="wrap readout-inner">
+      <div class="readout-item">
+        <div class="label">O painel hoje</div>
+        <p>PostHog/GA4 mal configurado ou nem existe. Planilha de ads atualizada de vez em quando. Roadmap decidido no achismo.</p>
+      </div>
+      <div class="readout-item">
+        <div class="label">O que muda</div>
+        <p><strong>Instrumento certo + interpretação humana.</strong> Não é dashboard bruto pra você decifrar sozinho — é "aqui está o que aconteceu e o que fazer".</p>
+      </div>
+      <div class="readout-item">
+        <div class="label">O resultado</div>
+        <p>Você detecta o vazamento em <strong>dias</strong>, não em meses de CAC subindo sem ninguém perceber.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-tag">Por que Farol e não a alternativa óbvia</div>
+        <h2>A conta que ninguém faz antes de decidir</h2>
+      </div>
+
+      <div class="diff-table">
+        <div class="diff-row head">
+          <div class="diff-cell alt">Alternativa</div>
+          <div class="diff-cell why">Por que perde</div>
+        </div>
+        <div class="diff-row">
+          <div class="diff-cell alt">Contratar CLT (analista + gestor de tráfego)</div>
+          <div class="diff-cell why">Caro e lento de contratar pro seu estágio — 2 salários antes de saber se precisa dos 2.</div>
+        </div>
+        <div class="diff-row">
+          <div class="diff-cell alt">Fazer sozinho</div>
+          <div class="diff-cell why">É literalmente o que já está acontecendo — e é o problema, não a solução.</div>
+        </div>
+        <div class="diff-row">
+          <div class="diff-cell alt">Ferramenta self-serve internacional</div>
+          <div class="diff-cell why">Cobra em dólar, sem ninguém interpretando o dado — você continua sozinho, só que com mais gráfico.</div>
+        </div>
+        <div class="diff-row">
+          <div class="diff-cell alt">Agência de mídia tradicional</div>
+          <div class="diff-cell why">Só cobre ads. Ignora se o produto/funil está instrumentado — metade do problema fica de fora.</div>
+        </div>
+        <div class="diff-row you">
+          <div class="diff-cell alt">Farol</div>
+          <div class="diff-cell why">Cobre os dois lados (analytics + ads), com pessoa real interpretando, em BRL, sem compromisso de CLT.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="planos">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-tag">Como começar</div>
+        <h2>Do diagnóstico ao painel completo</h2>
+        <p class="section-sub">Comece pelo diagnóstico — baixo compromisso, entrega em dias. Evolui pro acompanhamento gerenciado quando fizer sentido.</p>
+      </div>
+
+      <div class="tiers">
+
+        <div class="tier primary">
+          <span class="tier-badge now">Comece aqui</span>
+          <div class="tier-label">Diagnóstico</div>
+          <div class="tier-name">Farol Diagnóstico</div>
+          <div class="tier-desc">Auditoria real do seu PostHog/GA4 e da sua conta de ads. O que está quebrado, onde o funil vaza, o que configurar primeiro.</div>
+          <div class="tier-price"><span class="now">R$297</span></div>
+          <div class="tier-fine">pagamento único · entrega em dias</div>
+          <a class="tier-cta" href="https://buy.stripe.com/00wfZi0p6fVI3sCeqq6Ri01">Pedir meu diagnóstico</a>
+        </div>
+
+        <div class="tier">
+          <span class="tier-badge wait">Venda assistida</span>
+          <div class="tier-label">Gerenciado</div>
+          <div class="tier-name">Farol Gerenciado</div>
+          <div class="tier-desc">Setup completo de analytics + monitoramento semanal de ads com insight acionável. Acompanhamento contínuo, não um raio-x único.</div>
+          <div class="tier-price"><span class="old">R$997</span><span class="now">R$697</span><span class="period">/mês</span></div>
+          <div class="tier-fine">preço de lançamento · requer conversa antes de começar</div>
+          <a class="tier-cta" href="mailto:caio.borgesdeo@gmail.com?subject=Farol%20Gerenciado%20%E2%80%94%20agendar%20conversa&body=Quero%20agendar%20uma%20conversa%20sobre%20o%20Farol%20Gerenciado.">Agendar conversa</a>
+        </div>
+
+        <div class="tier disabled">
+          <span class="tier-badge wait">Em breve</span>
+          <div class="tier-label">Starter</div>
+          <div class="tier-name">Farol Starter</div>
+          <div class="tier-desc">Dashboard automatizado com alerta em tempo real, self-serve. Ainda não existe — entra na lista de espera.</div>
+          <div class="tier-price"><span class="now">—</span></div>
+          <div class="tier-fine">lista de espera</div>
+          <a class="tier-cta" href="mailto:caio.borgesdeo@gmail.com?subject=Farol%20Starter%20%E2%80%94%20lista%20de%20espera&body=Quero%20ser%20avisado%20quando%20o%20Farol%20Starter%20estiver%20dispon%C3%ADvel.">Entrar na lista</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>Chega de decidir no escuro.</h2>
+      <p class="final-sub">O diagnóstico é o menor passo possível pra sair do voo cego — entrega em dias, sem compromisso mensal.</p>
+      <a class="btn-primary" href="https://buy.stripe.com/00wfZi0p6fVI3sCeqq6Ri01">Pedir meu diagnóstico — R$297</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>Farol · entrega em dias úteis · sem fidelidade no Gerenciado</p>
+    </div>
+  </footer>
+
+</body>
+</html>
