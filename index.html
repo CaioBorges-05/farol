@@ -138,6 +138,26 @@
   .diff-cell.why { color: var(--text-sec); line-height: 1.55; }
   .diff-row.you .diff-cell.why { color: var(--text); }
 
+  /* ===== COST CALLOUT ===== */
+  .cost-box { max-width: 720px; margin: 0 auto 24px; border: 1px solid var(--accent-mid); background: var(--accent-dim); border-radius: 12px; padding: 26px 30px; }
+  .cost-tag { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 10px; }
+  .cost-box p { font-size: 15px; color: var(--text-sec); line-height: 1.75; }
+  .cost-box strong { color: var(--text); }
+  .cost-box .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--text); }
+
+  .cmo-box { max-width: 720px; margin: 0 auto 80px; border: 1px solid var(--border); border-radius: 12px; padding: 22px 30px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .cmo-box .num { font-family: var(--font-display); font-weight: 800; font-size: 30px; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .cmo-box .label { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .cmo-box p { font-size: 14px; color: var(--text-sec); max-width: 420px; }
+
+  /* ===== GUARANTEE ===== */
+  .guarantee { max-width: 780px; margin: 28px auto 0; text-align: center; }
+  .guarantee p { font-family: var(--font-mono); font-size: 12px; color: var(--text-sec); line-height: 1.7; }
+  .guarantee strong { color: var(--accent); }
+
+  .slots-note { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 11px; color: var(--warn); margin-top: 10px; }
+  .slots-note .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--warn); flex-shrink: 0; }
+
   /* ===== TIERS ===== */
   .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start; margin-top: 8px; }
   .tier { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px; position: relative; }
@@ -276,6 +296,26 @@
           <div class="diff-cell why">Estratégia + execução + medição, com pessoa real interpretando, em BRL, sem compromisso de CLT nem contrato de agência.</div>
         </div>
       </div>
+
+      <div class="cost-box">
+        <div class="cost-tag">A conta que ninguém faz</div>
+        <p>
+          Founder gastando <strong class="mono">R$5.000/mês</strong> em ads, sem ninguém monitorando de perto,
+          deixa o CAC subir <strong class="mono">20%</strong> por um mês inteiro sem perceber — isso é
+          <strong class="mono">R$1.000</strong> queimado, sozinho, já maior que uma mensalidade do Gerenciado.
+          Três meses sem ninguém olhando — o padrão, não a exceção, pra quem não tem função de growth —
+          e o prejuízo passa de <strong class="mono">R$3.000</strong>. A pergunta não é se compensa contratar.
+          É quanto você já perdeu por não ter.
+        </p>
+      </div>
+
+      <div class="cmo-box">
+        <div>
+          <div class="label">Gerenciado vs. CMO fracionado</div>
+          <p>Resolve o mesmo problema, no seu estágio, sem o compromisso de uma contratação.</p>
+        </div>
+        <div class="num">&lt;20%</div>
+      </div>
     </div>
   </section>
 
@@ -307,6 +347,7 @@
           <div class="tier-price"><span class="old">R$1.997</span><span class="now">R$1.497</span><span class="period">/mês</span></div>
           <div class="tier-fine">preço de lançamento · requer conversa antes de começar</div>
           <a class="tier-cta" href="mailto:caio.borgesdeo@gmail.com?subject=Farol%20Gerenciado%20%E2%80%94%20agendar%20conversa&body=Quero%20agendar%20uma%20conversa%20sobre%20o%20Farol%20Gerenciado.">Agendar conversa</a>
+          <div class="slots-note"><span class="dot"></span>vagas limitadas por mês — atendimento pessoal, não escala em time</div>
         </div>
 
         <div class="tier disabled">
@@ -320,13 +361,17 @@
         </div>
 
       </div>
+
+      <div class="guarantee">
+        <p><strong>Garantia do Diagnóstico:</strong> se eu não encontrar pelo menos 3 problemas reais e acionáveis na sua auditoria, devolvo os R$297 — sem perguntas.</p>
+      </div>
     </div>
   </section>
 
   <section class="final">
     <div class="wrap">
-      <h2>Chega de decidir no escuro.</h2>
-      <p class="final-sub">O diagnóstico é o menor passo possível pra sair do voo cego — entrega em dias, sem compromisso mensal.</p>
+      <h2>Cada mês sem isso já tem um custo — você só não viu o número ainda.</h2>
+      <p class="final-sub">R$297 e alguns dias é o menor risco possível pra descobrir onde está vazando. Garantido, ou seu dinheiro de volta.</p>
       <a class="btn-primary" href="https://buy.stripe.com/00wfZi0p6fVI3sCeqq6Ri01">Pedir meu diagnóstico — R$297</a>
     </div>
   </section>
