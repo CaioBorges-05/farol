@@ -1,8 +1,8 @@
-# Farol
+# REG
 
 Função de marketing e growth pra founder early-stage BR que ainda não tem time de marketing dedicado — analytics, ads, posicionamento e estratégia de canal.
 
-**PUV (v2):** Farol assume sua função de marketing e growth — analytics, ads, posicionamento e estratégia de canal — pra você não precisar contratar um CMO ou um time inteiro que ainda não cabe no seu estágio.
+**PUV (v2):** REG assume sua função de marketing e growth — analytics, ads, posicionamento e estratégia de canal — pra você não precisar contratar um CMO ou um time inteiro que ainda não cabe no seu estágio.
 
 Ver `docs/positioning.md` (framework JTBD completo, com changelog v1→v2) e `docs/brand-tokens.md` (identidade visual, direção de aviação/cockpit).
 
@@ -22,4 +22,4 @@ Landing page (`index.html`) e Stripe do Diagnóstico prontos. Falta:
 
 ## Winlist
 
-O projeto anterior (`~/winlist`) está **pausado/arquivado** — não descontinuado, mas sem desenvolvimento ativo. Foco total no Farol.
+O projeto anterior (`~/winlist`) está **pausado/arquivado** — não descontinuado, mas sem desenvolvimento ativo. Foco total no REG.

@@ -1,6 +1,6 @@
-# Farol — Identidade Visual
+# REG — Identidade Visual
 
-Direção: instrumento de aviação, não farol marítimo. A ideia central é "painel de voo do seu crescimento" — cockpit, radar, torre de controle, não litoral/navio. A copy precisa reforçar isso ativamente (ver `docs/positioning.md`), porque o nome sozinho puxa pra farol de navio.
+**REG = Radar Estratégico de Growth.** Direção: instrumento de aviação/radar — cockpit, varredura, torre de controle. Diferente da fase "Farol" do projeto, o nome agora bate direto com a identidade visual (radar) — não precisa mais de ressalva pra afastar associação com farol marítimo.
 
 ## Conceito
 
@@ -44,7 +44,7 @@ Em ambientes que bloqueiam fonte externa (preview de artifact), cai numa pilha d
 - **Cards de instrumento**: painel com borda fina, cantos levemente technical (não totalmente arredondado, mais "display de vidro" que "app fofo").
 - **Badge de status semântico**: pequeno indicador colorido (âmbar/vermelho/verde) + label mono uppercase — pensado pra já parecer o componente real de alerta do produto.
 
-## Aplicação no Farol
+## Aplicação no REG
 
-- Wordmark: `Farol` em Sora 700-800.
+- Wordmark: `REG` em Sora 700-800.
 - Diferente do Winlist (lima em preto neutro), aqui é ciano frio em preto azulado — precisa ler como "instrumento sério", não "app de dropshipping animado".

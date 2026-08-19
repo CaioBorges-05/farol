@@ -1,4 +1,4 @@
-# Farol — Playbook do Diagnóstico
+# REG — Playbook do Diagnóstico
 
 Processo interno de execução do Diagnóstico (R$297). Objetivo: entregar um relatório real em até 3 dias úteis após receber acesso, que sirva como prova de valor pro upsell natural pro Gerenciado.
 
@@ -39,7 +39,7 @@ Checklist — marcar cada item como OK / QUEBRADO / AUSENTE:
 
 ## 3. Auditoria de landing page / CRO
 
-Fecha o funil que a auditoria de ads deixa em aberto — de nada adianta clique bem trackeado numa página que vaza. Referência: prática validada em escala pela V4 Company (maior rede de marketing digital do Brasil), adaptada ao escopo do Farol.
+Fecha o funil que a auditoria de ads deixa em aberto — de nada adianta clique bem trackeado numa página que vaza. Referência: prática validada em escala pela V4 Company (maior rede de marketing digital do Brasil), adaptada ao escopo do REG.
 
 - [ ] **Promessa do anúncio bate com a página** — o criativo/copy do anúncio promete a mesma coisa que a landing page entrega logo no topo? Divergência aqui é a causa nº1 de clique caro sem conversão.
 - [ ] **CTA único e claro** — a página tem um caminho de conversão óbvio, ou compete consigo mesma com múltiplos CTAs concorrentes?
@@ -62,7 +62,7 @@ Entregar como página/documento, seguindo esta ordem (achado mais crítico prime
 ## Template — e-mail de coleta de acesso
 
 ```
-Assunto: Farol — acesso pra começar seu Diagnóstico
+Assunto: REG — acesso pra começar seu Diagnóstico
 
 Oi [nome],
 

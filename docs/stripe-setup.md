@@ -1,4 +1,4 @@
-# Farol — Stripe
+# REG — Stripe
 
 Conta: `acct_1TPZ5OKtWahGMnv9` ("Caio Borges"), **modo live** (mesma conta do Winlist).
 
@@ -6,7 +6,7 @@ Conta: `acct_1TPZ5OKtWahGMnv9` ("Caio Borges"), **modo live** (mesma conta do Wi
 
 | Item | Produto ID | Preço | Price ID |
 |---|---|---|---|
-| Farol Diagnóstico | `prod_V6LzhZi4RDCuJk` | R$497,00 (BRL, pagamento único) | `price_1U6DJxKtWahGMnv9OBnQKFRl` |
+| REG Diagnóstico | `prod_V6LzhZi4RDCuJk` | R$497,00 (BRL, pagamento único) | `price_1U6DJxKtWahGMnv9OBnQKFRl` |
 
 **Payment Link ativo:** `plink_1U6DKOKtWahGMnv9TtkNQm8E` → https://buy.stripe.com/9B628s2xe9xk4wG2HI6Ri02 — funcionando de verdade, cartão. Pix/boleto não ativados (mesma pendência do Winlist).
 
