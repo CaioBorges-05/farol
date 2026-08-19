@@ -2,6 +2,8 @@
 
 Processo interno de execução do Diagnóstico (R$297). Objetivo: entregar um relatório real em até 3 dias úteis após receber acesso, que sirva como prova de valor pro upsell natural pro Gerenciado.
 
+**Garantia ativa no site (`index.html`):** se o Diagnóstico não encontrar pelo menos 3 problemas reais e acionáveis, reembolso total, sem perguntas. Na prática o risco é baixíssimo — qualquer conta sem função de growth dedicada tem pelo menos 3 problemas reais (é raro o caso em que não tem) — mas trate o reembolso como compromisso sério se algum dia for pedido: via Stripe Dashboard → Payments → Refund, no pagamento correspondente. Não questionar, não negociar — é a promessa que está no site.
+
 ## 0. Depois do pagamento — coleta de acesso
 
 Envie o e-mail de coleta de acesso (template no fim deste doc) pedindo, no mínimo:
